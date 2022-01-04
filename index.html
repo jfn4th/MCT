@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pathfinder Mass Combat Tool</title>
+
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/mct.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/mct.css">
+	</head>
+	<body>
+		<div class="bodywrap">
+			<div class="inputs row">
+				<div id="attacker" class="col">
+					<h1>Attacker</h1>
+				</div>
+				<div id="defender" class="col">
+					<h1>Defender</h1>
+				</div>
+			</div>
+			<div class="goContainer row">
+				<input value="Fight!" type="button" onclick="setup();" />
+			</div>
+		</div>
+		<div id="templates">
+			<div id="colTemplate">
+				<div class="row">
+					<label>Enter Challenge Rating:</label>
+					<input class="crInput" type="text" />
+				</div>
+
+				<div class="row">
+					<label>Enter Army Size:</label>
+					<select class="sizeSel">
+						<option value="1">Fine (1)</option>
+						<option value="2">Diminutive (10)</option>
+						<option value="3">Tiny (24)</option>
+						<option value="4">Small (50)</option>
+						<option value="5">Medium (100)</option>
+						<option value="6">Large (200)</option>
+						<option value="7">Huge (500)</option>
+						<option value="8">Gargantuan (1000)</option>
+						<option value="9">Colossal (2000)</option>
+					</select>
+				</div>
+				<div class="row">
+					<label>Select Hit Dice:</label>
+					<select class="hdSelect">
+						<option value="2.5">d4</option>
+						<option value="3.5">d6</option>
+						<option value="4.5">d8</option>
+						<option value="5.5">d10</option>
+						<option value="6.5">d12</option>
+					</select>
+				</div>
+				<div class="row conditionRow">
+					<input class="modButton" type="button" value="Add Condition" onClick="addCondition(this);" />
+					<div class="subrow"></div>
+				</div>
+				<div class="row tacticsRow">
+					<input class="modButton" type="button" value="Add Tactic" onClick="addTactic(this);" />
+					<div class="subrow"></div>
+				</div>
+				<div class="row strategyRow">
+					<input class="modButton" type="button" value="Add Strategy" onClick="addStrategy(this);" />
+					<div class="subrow"></div>
+				</div>
+				<div class="row stats">
+					<div class="statsleft">
+						<h2>Stats</h2>
+						<div class="ACRRow row">
+							<label class="label">ACR:</label>
+							<div class="value"></div>
+						</div>
+						<div class="DVRow row">
+							<label class="label">DV:</label>
+							<div class="value"></div>
+						</div>
+						<div class="OVRow row">
+							<label class="label">OV:</label>
+							<div class="value"></div>
+						</div>
+						<div class="DamRow row">
+							<label class="label">DAM:</label>
+							<div class="value"></div>
+						</div>
+						<div class="HPRow row">
+							<label class="label">Start HP:</label>
+							<div class="value"></div>
+						</div>
+						<div class="RollRow row">
+							<label class="label">Roll:</label>
+							<div class="value"></div>
+						</div>
+						<div class="EndHPRow row">
+							<label class="label">End HP:</label>
+							<div class="value"></div>
+						</div>
+					</div>
+					<div class="statsright" style="display:none;">
+						<h2>Modifiers</h2>
+						<div class="miscWrapper">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="condTemplate">
+				<div class="conditions">
+                    <input type="button" class="close" onclick="removeModifier(this)" value="x"></input>
+					<select class="condChoice">
+						<option value="1">Fortifications</option>
+						<option value="2">Advantageous Terrain</option>
+					</select>
+				</div>
+			</div>
+			<div id="tacticTemplate">
+				<div class="tactics">
+                    <input type="button" class="close" onclick="removeModifier(this)" value="x"></input>
+					<select class="tacticChoice">
+						<option value="1">Defensive Wall</option>
+						<option value="2">Relentless Brutality</option>
+					</select>
+				</div>
+			</div>
+			<div id="strategyTemplate">
+				<div class="strategy">
+                    <input type="button" class="close" onclick="removeModifier(this)" value="x"></input>
+					<select class="strategyChoice">
+						<option value="1">Defensive</option>
+						<option value="2">Cautious</option>
+						<option value="3">Standard</option>
+						<option value="4">Aggressive</option>
+						<option value="5">Reckless</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

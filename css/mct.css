@@ -1,0 +1,85 @@
+body {
+	background: black;
+}
+
+#templates {
+	display: none;
+}
+
+.row {
+	width: 100%;
+	display: block;
+}
+
+.col:first-child {
+	border-right: 1px solid gray;
+}
+
+.col {
+	width: 47%;
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+    padding-left: 20px;
+}
+
+.bodywrap {
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+}
+
+.error {
+	color: red;
+	padding-bottom: 10px;
+}
+
+.stats label {
+	display: inline-block;
+	font-weight: bold;
+	width: 50%;
+    text-align: right;
+}
+
+.stats .value {
+	display: inline-block;
+}
+
+.statsleft, .statsright {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.statsleft {
+	width: 30%;
+}
+
+.statsright {
+	width: 65%;
+}
+
+.miscWrapper {
+	border: 1px solid gray;
+}
+
+.subrow {
+	width: 65%;
+	display: inline-block;
+}
+
+.modButton {
+	vertical-align: top;
+	width: 30%;
+}
+
+.goContainer {
+	padding: 15px 0;
+    margin-left: -10px;
+}
+
+.goContainer input {
+	margin: 0 auto;
+	display: block;
+}
